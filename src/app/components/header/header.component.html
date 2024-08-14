@@ -2,13 +2,15 @@
   <div class="container">
     <div class="header-wrapper">
       <div class="logo">
-        <a href="index.html">
+        <a [routerLink]="['/']" routerLinkActive="router-link-active">
           <img src="assets/images/logo/logo.png" alt="logo" />
         </a>
       </div>
       <ul class="menu">
         <li>
-          <a>Home</a>
+          <a [routerLink]="['/']" routerLinkActive="router-link-active">
+            Home</a
+          >
         </li>
       </ul>
       <div class="header-bar d-lg-none">

@@ -1,7 +1,10 @@
 <div class="m-3">
   <div class="movie-grid">
     <div class="movie-thumb c-thumb">
-      <a href="movie-details.html">
+      <a
+        [routerLink]="['/movie', Movie?.movieId]"
+        routerLinkActive="router-link-active"
+      >
         <img
           src="data:image/jpeg;base64, {{ Movie?.movieThumbnail?.photo }}"
           alt="movie"
@@ -10,7 +13,11 @@
     </div>
     <div class="movie-content bg-one">
       <h5 class="title m-0">
-        <a href="movie-details.html">{{ Movie?.movieTitle }}</a>
+        <a
+          [routerLink]="['/movie', Movie?.movieId]"
+          routerLinkActive="router-link-active"
+          >{{ Movie?.movieTitle }}</a
+        >
       </h5>
       <ul class="movie-rating-percent">
         <li>

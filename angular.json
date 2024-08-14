@@ -38,7 +38,23 @@
               "public/assets/css/owl.carousel.min.css",
               "public/assets/css/owl.theme.default.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "public/assets/js/nice-select.js",
+              "public/assets/js/main.js",
+              "public/assets/js/contact.js",
+              "public/assets/js/bootstrap.min.js",
+              "public/assets/js/countdown.min.js",
+              "public/assets/js/heandline.js",
+              "public/assets/js/isotope.pkgd.min.js",
+              "public/assets/js/jquery-3.3.1.min.js",
+              "public/assets/js/magnific-popup.min.js",
+              "public/assets/js/modernizr-3.6.0.min.js",
+              "public/assets/js/odometer.min.js",
+              "public/assets/js/owl.carousel.min.js",
+              "public/assets/js/plugins.js",
+              "public/assets/js/viewport.jquery.js",
+              "public/assets/js/wow.min.js"
+            ]
           },
           "configurations": {
             "production": {
