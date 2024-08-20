@@ -1,0 +1,98 @@
+<div class="movie-facility padding-bottom padding-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="checkout-widget checkout-contact">
+          <h5 class="title">Share your Contact Details</h5>
+          <form
+            class="checkout-contact-form"
+            [formGroup]="formGroup"
+            (ngSubmit)="onSubmit($event)"
+          >
+            <div class="form-group">
+              <input
+                required
+                type="text"
+                placeholder="Full Name"
+                value=""
+                formControlName="name"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                formControlName="email"
+                required
+                type="email"
+                placeholder="Enter your Mail"
+                value=""
+              />
+            </div>
+            <div class="form-group">
+              <input
+                formControlName="phone"
+                maxlength="10"
+                minlength="10"
+                required
+                type="number"
+                placeholder="Enter your Phone Number "
+                value=""
+              />
+            </div>
+            <div class="form-group">
+              <input type="submit" class="custom-button" value="Continue" />
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="booking-summery bg-one">
+          <h4 class="title">booking summery</h4>
+          <ul>
+            <li>
+              <h6 class="subtitle">{{ data.movie.movieTitle }}</h6>
+              <span class="info">English-2d</span>
+            </li>
+            <li>
+              <h6 class="subtitle">
+                <span>{{ data.hall.theater.theaterName }}</span>
+                <span>{{ data.selectedSeats.length }}</span>
+              </h6>
+              <div class="info">
+                <span
+                  >{{ date.toDateString() }},
+                  {{ date.toLocaleTimeString() }}</span
+                >
+                <span>Tickets</span>
+              </div>
+            </li>
+          </ul>
+          <ul class="side-shape">
+            <li>
+              <h6 class="subtitle mb-0">
+                <span>Tickets Price</span><span>${{ data.totalPrice }}</span>
+              </h6>
+              @for (seat of data.selectedSeats; track $index) {
+              <span class="info">
+                <span>{{ seat.seatNumber }}</span>
+                <span>${{ seat.price }}</span>
+              </span>
+              }
+            </li>
+          </ul>
+        </div>
+        <div class="proceed-area text-center">
+          <h6 class="subtitle">
+            <span>Amount Payable</span><span>${{ data.totalPrice }}</span>
+            <button
+              type="button"
+              (click)="closeModal()"
+              class="mt-3 btn btn-danger"
+            >
+              Cancel
+            </button>
+          </h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
