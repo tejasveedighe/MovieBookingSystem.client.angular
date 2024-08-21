@@ -1,0 +1,25 @@
+<section class="banner-section">
+  <div
+    class="banner-bg bg_img bg-fixed"
+    data-background="assets/images/banner/banner02.jpg"
+    style="background-image: url('assets/images/banner/banner02.jpg')"
+  ></div>
+  <div class="container">
+    <div class="banner-content">
+      <h1 class="title bold">
+        Booking
+        <span [class]="this.success ? 'color-theme' : 'text-danger'">{{
+          this.success ? "Confirmed" : this.cancel ? "Cancelled" : ""
+        }}</span>
+      </h1>
+      @if(this.success) {
+      <p>
+        The ticket will be sent to you on your email, that you mentioned on the
+        time of checkout.
+      </p>
+      } @else {
+      <p>Your booking has been cancelled successfully.</p>
+      }
+    </div>
+  </div>
+</section>

@@ -38,11 +38,6 @@ export class BookTicketsModalComponent {
   onSubmit($event: Event) {
     $event.preventDefault();
 
-    if (!this.formGroup.valid) {
-      alert('Invalid inputs');
-      return;
-    }
-
     this.closeModal();
 
     const body = {

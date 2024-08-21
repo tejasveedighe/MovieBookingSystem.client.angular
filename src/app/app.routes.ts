@@ -4,6 +4,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { MovieDetailsComponent } from './pages/movie-details/movie-details.component';
 import { BookingsComponent } from './pages/bookings/bookings.component';
 import { SeatSelectionComponent } from './pages/seat-selection/seat-selection.component';
+import { ConfirmationPageComponent } from './pages/confirmation-page/confirmation-page.component';
 
 export const routes: Routes = [
   {
@@ -12,9 +13,16 @@ export const routes: Routes = [
     children: [
       { title: 'Home', path: '', component: HomeComponent },
       {
+        title: '',
+        path: 'bookings/status',
+        component: ConfirmationPageComponent,
+        pathMatch: 'full',
+      },
+      {
         title: 'Movie Detail',
         path: 'movie/:id',
         component: MovieDetailsComponent,
+        pathMatch: 'full',
       },
       {
         title: 'Move Bookings',
